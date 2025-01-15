@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML Attributes</title>
+    </head>
+    <img src="https://via.placeholder.com/200" alt="placeholder image"/>
+    <img src="./assets/images/sample.jpg" alt="placeholder image"/>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <section class="lesson 1">
+        <p id="paragraph-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+    </section>
+</html>
