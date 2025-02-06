@@ -36,7 +36,12 @@ h1{
     font-size:60px;
     text-align: center;
     margin-top: 65px;
-    font-family: 'Indie Flower', cursive;
+    font-family: "Indie Flower", cursive;
+}
+h3 > a{
+    color:blue;
+    font-size: 20px;
+    padding:0;
 }
 nav{
     margin: 30px;
