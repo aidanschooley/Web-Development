@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-length" initial-scale="1.0">
+    <title>Print Array</title>
+</head>
+
+<body>
+    <script>
+        let array = []
+        function press() {
+            let element = document.getElementById("element").value;
+            array.push(element)
+            console.log(array);
+            element.innerHTML = "";
+        }
+        function press2() {
+            let text= ""
+            for (let i = 0; i < array.length; i++) {
+                text += array[i] + " ";
+            }
+            document.getElementById("pArray").innerHTML= text;
+        }
+    </script>
+    <input type="text" id="element" placeholder="Enter">
+    <button id="btnPressme" onclick="press()">Add Element!</button>
+    <button id="PrintArray" onclick="press2()">Print Array!</button>
+    <p id="pArray"></p>
+</body>
+
+</html>
