@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-length" initial-scale="1.0">
+    <title>Toggle Visibility</title>
+</head>
+<body>
+    <ul id="list"></ul>
+    <input id="item" placeholder="Enter Item"/>
+    <button id="AddItem" onclick=press()>Enter Item</button>
+    <script>
+        function press(){
+            const inputItem = document.getElementById("item");
+            const item = inputItem.value;
+            console.log(item);
+            const li1 = document.createElement("li");
+            li1.textContent = item;
+            const list = document.getElementById("list");
+            list.appendChild(li1);
+        }
+    </script>
+</body>
+</html>

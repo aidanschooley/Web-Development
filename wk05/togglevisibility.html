@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-length" initial-scale="1.0">
+    <title>Toggle Visibility</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Hello</h1>
+        <h2>World</h2>
+        <h3>!!!</h3>
+    </div>
+    <button id="btn" onclick=press()>Hide Elements</button>
+
+    <script>
+        function press(){
+            let section = document.getElementById("content");
+            if(section.style.display == "none"){
+                section.style.display =  "inline";
+                document.getElementById("btn").textContent = "Hide Elements";
+            } else{
+                section.style.display = "none"
+                document.getElementById("btn").textContent = "Show Elements";
+            }
+        }
+    </script>
+</body>
+</html>

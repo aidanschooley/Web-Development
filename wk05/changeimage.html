@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-length" initial-scale="1.0">
+    <title>Image</title>
+</head>
+
+<body>
+    <img id="srcImg"
+        src="https://assets.vogue.com/photos/6383ae89831db0d9b441451d/master/w_2560%2Cc_limit/GettyImages-909708218.jpg" 
+        width="300" height="300"/>
+    <button id="changeImg" onclick=press()>Change Image</button>
+
+    <script>
+        function press() {
+            let img = document.getElementById("srcImg");
+            let attributeValue = img.getAttribute("src");
+            if (attributeValue == "https://assets.vogue.com/photos/6383ae89831db0d9b441451d/master/w_2560%2Cc_limit/GettyImages-909708218.jpg") {
+                img.setAttribute("src", "https://www.muchbetteradventures.com/magazine/content/images/2021/04/GettyImages-606631800--1-.jpg");
+            } else {
+                img.setAttribute("src", "https://assets.vogue.com/photos/6383ae89831db0d9b441451d/master/w_2560%2Cc_limit/GettyImages-909708218.jpg");
+            }
+        }
+    </script>
+</body>
+
+</html>

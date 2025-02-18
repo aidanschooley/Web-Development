@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-length" initial-scale="1.0">
+    <title>Change Text</title>
+</head>
+<body>
+    <p id="text">Hello World</p>
+    <button id="btn" onclick=press()>Change Text</button>
+    <script>
+
+        function press(){
+            let text = document.getElementById("text");
+            text.textContent = text.innerHTML +"!";
+        }
+    </script>
+</body>
+</html>

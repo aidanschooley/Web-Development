@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-length", initial-scale="1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form name="myForm" action="" onsubmit="return validateForm(event)" method="post">
+        Name: <input type="text" name="Name"/>
+        <input type="submit" value="submit" />
+    </form>
+    <script>
+       function validateForm(event){
+            const name = document.forms["myForm"]["Name"].value;
+            console.log("This is the input: " + name)
+            if(name === ""){
+                alert("Invalid Input");
+                event.preventDefault();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

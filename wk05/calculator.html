@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div id="result">0</div> 
+    <span>
+        <button id="ac" onclick="ac()">AC</button>
+        <button id="/" class="orange" onclick="addString('/')">/</button>
+    </span>
+    <br/>
+    <span>
+        <button id="7" onclick="addString('7')">7</button>
+        <button id="8" onclick="addString('8')">8</button>
+        <button id="9" onclick="addString('9')">9</button>
+        <button id="X" class="orange" onclick="addString('*')">X</button>
+    </span>
+    <br/>
+    <span>
+        <button id="4" onclick="addString('4')">4</button>
+        <button id="5" onclick="addString('5')">5</button>
+        <button id="6" onclick="addString('6')">6</button>
+        <button id="-" class="orange" onclick="addString('-')">-</button>
+    </span>
+    <br/>
+    <span>
+        <button id="1" onclick="addString('1')">1</button>
+        <button id="2" onclick="addString('2')">2</button>
+        <button id="3" onclick="addString('3')">3</button>
+        <button id="+" class="orange" onclick="addString('+')">+</button>
+    </span>
+    <br/>
+    <span>
+        
+        <button id="0" onclick="addString('0')">0</button>
+        <button id="." onclick="addString('.')">.</button>
+        <button id="=" class="orange" onclick="evaluateEquation()">=</button>
+    </span>
+    <script>
+        let stringMath ="";
+        function addString(str){
+            stringMath += str;
+            document.getElementById("result").innerHTML = stringMath;
+            console.log(stringMath)
+        }
+
+        function ac(){
+            stringMath="";
+            document.getElementById("result").innerHTML= "0";
+        }
+        function evaluateEquation(){
+            let answer = eval(stringMath);
+            document.getElementById("result").innerHTML= answer;
+        }
+    </script>
+</body>
+</html>

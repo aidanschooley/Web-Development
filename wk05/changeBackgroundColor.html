@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-length" initial-scale="1.0">
+    <title>Change Background Color</title>
+</head>
+<body>
+    <div id="hello">
+        <h1>Hello</h1>
+    </div>
+
+    <script>
+        document.getElementById("hello").addEventListener("mouseover",function1);
+        document.getElementById("hello").addEventListener("mouseout",function2);
+        // addEventListener("onclick", function1);
+
+        function function1(){
+            const div1 = document.getElementById("hello")
+            div1.style.backgroundColor= "red";
+        }
+        function function2(){
+            const div1 = document.getElementById("hello")
+            div1.style.backgroundColor= "white";
+        }
+
+    </script>
+</body>
+</html>
