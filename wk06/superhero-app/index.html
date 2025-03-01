@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+    <title>Superhero App</title>
+</head>
+
+<body>
+    
+    <h1 id="superheroName">Superhero Name</h1>
+
+    <div class="imageBox"><img id="image" src="data:image/jpeg;base64,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"></image>
+    
+    </div>
+    <br>
+    <input type="text" id="heroName" name="shsearch" placeholder="Enter Superhero Name">
+    <button id="searchButton" onclick="getSuperheroByName(document.getElementById('heroName').value)">Find</button>
+
+    <div class="row">
+    <div id="stats" class="column">
+        <h2 id="statsHeading">Stats</h2>
+        <p id="intelligence">Intelligence:</p>
+        <p id="strength">Strength:</p>
+        <p id="speed">Speed:</p>
+        <p id="durability">Durability:</p>
+        <p id="power">Power:</p>
+        <p id="combat">Combat:</p>
+    </div>
+
+    <div id="biography" class="column">
+        <h2 id="biographyHeading">Biography</h2>
+        <p id="full-name">Full Name:</p>
+        <p id="alter-egos">Alter Ego:</p>
+        <p id="aliases">Aliases:</p>
+        <p id="place-of-birth">Place of Birth:</p>
+        <p id="first-appearance">First Appearance:</p>
+        <p id="publisher">Publisher:</p>
+        <p id="alignment">Alignment:</p>
+    </div>
+
+    <div id="appearance" class="column">
+        <h2 id="appearanceHeading">Appearance</h2>
+        <p id="gender">Gender:</p>
+        <p id="race">Race:</p>
+        <p id="height">Height:</p>
+        <p id="weight">Weight:</p>
+        <p id="eye-color">Eye Color:</p>
+        <p id="hair-color">Hair Color:</p>
+    </div>
+</div>
+
+
+</body>
+
+</html>
