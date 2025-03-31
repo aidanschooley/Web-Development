@@ -1,0 +1,40 @@
+<%- include('layout'); -%>
+    <title>
+        <%=title %>
+    </title>
+    </head>
+
+    <body>
+        <h1 class="note header">
+            <a href="/"><button class="new-note home">Home</button></a>
+            Add Note</h1>
+        <form action="/updateNote/<%= note.id %>" method="POST">
+            <div >
+            <label for="title">Title:</label> <br>
+            <input type="text" name="title" value="<%= note.title %>"> <br>
+            
+            <label for="note">Note:</label> <br>
+            <input type="text" id="note" name="note" value="<%= note.note %>"> <br>
+            <label for="color">Color:</label> <br>
+            <input type="color" id="color" name="color" value="<%= note.color || '#FFFFFF' %>" list="allowed-colors">
+            <datalist id="allowed-colors">
+                <option value="#FFFFFF">White</option>
+                <option value="#FFF475">Yellow</option>
+                <option value="#CCFF90">Green</option>
+                <option value="#A7FFEB">Teal</option>
+                <option value="#CBF0F8">Blue</option>
+                <option value="#AECBFA">Dark Blue</option>
+                <option value="#D7AEFB">Purple</option>
+                <option value="#FDCFE8">Pink</option>
+                <option value="#E6C9A8">Brown</option>
+                <option value="#E8EAED">Gray</option>
+            </datalist> <br>
+            
+            <label class="star" for="star">Star</label> <br>
+            <input type="checkbox" id="star" name="star"/> <br>
+            <button class="new-note" type="submit">Update</button>
+        </div>
+        </form>
+    </body>
+
+    </html>

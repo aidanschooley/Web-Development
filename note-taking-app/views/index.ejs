@@ -1,0 +1,62 @@
+<%- include('layout'); -%>
+
+  <title>
+    <%=title %>
+  </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <a href="/addNote"><button class="new-note">New Note</button></a>
+      <form method="POST" action="/search">
+        <input type="text" name="search" class="search bar" id="search" placeholder="Search">
+        <button type="submit" class="search">Search</button>
+      </form>
+    </div>
+    <div class="container">
+      <% if (data && data.length> 0) { %>
+        <% data.forEach(function(note) { %>
+          <div class="note" style="background-color: <%= note.color %>">
+            <h1 class="title">
+              <%= note.title %>
+            </h1>
+            <p>
+              <%= note.note %>
+            </p>
+            <div class="button-container">
+          
+              <a href="/updateNote/<%=note.id %>"><button class="btn" style="background-color: <%= note.color %>"><i class="fa fa-edit"></i></button></a>
+
+              <form action="/deleteNote/<%= note.id %>" method="POST">
+                <button class="btn" type="submit" style="background-color: <%= note.color %>"> <i class="fa fa-trash"></i></button>
+              </form>
+              <form action="/star/<%= note.id %>" method="POST">
+                <button class="btn" type="submit" style="background-color: <%= note.color %>">
+                  <% if (note.star==true) { %>
+                    <i class="fa fa-star"></i>
+                    <% } else { %>
+                      <i class="fa fa-star-o"></i>
+                      <% } %>
+                </button>
+              </div>
+                <div class="times">
+                  <p>
+                    Last Updated:
+                    <%= note.updatedtime %>
+                  </p>
+                  <p>
+                    Created Time:
+                    <%= note.createdtime %>
+                  </p>
+                </div>
+            
+            </form>
+          </div>
+          <% }) %>
+            <% } else { %>
+              <p>No notes available.</p>
+              <% } %>
+    </div>
+  </body>
+
+  </html>
